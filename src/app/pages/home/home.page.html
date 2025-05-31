@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Chat en línea</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" color="light">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        Cerrar sesión
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="">
+  <ion-text color="medium">
+    <h4 class="ion-text-center">Bienvenido {{ email }}</h4>
+  </ion-text>
+
+  <div class="ion-margin-vertical">
+    <div *ngFor="let message of messages" 
+         [ngClass]="message.email === email ? 'ion-text-end' : 'ion-text-start'">
+      <ion-card [color]="message.email === email ? 'primary' : 'light'">
+        <ion-card-content>
+          <p class="ion-no-margin">{{ message.content }}</p>
+          <small>{{ message.email }} — {{ message.created_at | date:'shortTime' }}</small>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <ion-item lines="full" class="ion-margin-top">
+    <ion-input 
+      [(ngModel)]="newMessage"
+      placeholder="Escribe un mensaje..."
+      (keyup.enter)="sendMessage()"
+      clear-input>
+    </ion-input>
+    <ion-button (click)="sendMessage()" fill="solid" color="secondary">
+      <ion-icon name="send" slot="icon-only"></ion-icon> Enviar mensaje
+    </ion-button>
+  </ion-item>
+</ion-content>
