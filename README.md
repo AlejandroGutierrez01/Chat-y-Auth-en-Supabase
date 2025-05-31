@@ -1,5 +1,5 @@
 
-# 🧑‍💻 Chat en Línea con Ionic y Supabase - Deber de Repaso
+# Chat en Línea con Ionic y Supabase - Deber de Repaso
 
 Una app sencilla y moderna de chat en tiempo real, creada con Ionic y potenciada por Supabase como backend. Los usuarios pueden registrarse, iniciar sesión, confirmar su correo y empezar a chatear con cualquier persona conectada.
 
@@ -98,7 +98,7 @@ CREATE TABLE public.messagesChat (
 
 ![Políticas de seguridad](https://github.com/user-attachments/assets/eff926d7-88ff-4e8b-ab5c-b922e43a5245)
 
-### 📧 Confirmación por Correo
+### Confirmación por Correo
 
 1. En **Authentication > Templates**, activa "Confirm signup".
 2. En **Authentication > Settings > General**, define el `Site URL` como `http://localhost:8100`.
