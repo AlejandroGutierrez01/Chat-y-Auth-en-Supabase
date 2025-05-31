@@ -1,16 +1,17 @@
+
 # 🧑‍💻 Chat en Línea con Ionic y Supabase - Deber de Repaso
 
-Aplicación de chat en tiempo real desarrollada con Ionic Framework y Supabase. Permite a los usuarios registrarse, iniciar sesión, confirmar su correo electrónico y comunicarse en un chat global.
+Una app sencilla y moderna de chat en tiempo real, creada con Ionic y potenciada por Supabase como backend. Los usuarios pueden registrarse, iniciar sesión, confirmar su correo y empezar a chatear con cualquier persona conectada.
 
 ## 👨‍🏫 Desarrollado por
 - Isaac Quinapallo
 - Alejandro Gutierrez
 
-_Basado en el tutorial de Devdactic:_ [Supabase & Ionic - Build a Realtime Chat App](https://devdactic.com/supabase-ionic)
+_Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase & Ionic - Build a Realtime Chat App](https://devdactic.com/supabase-ionic)
 
 ---
 
-## 🚀 Características Principales
+## 🚀 ¿Qué puedes hacer con esta app?
 
 - **Autenticación de Usuarios**
   - Registro e inicio de sesión.
@@ -21,7 +22,7 @@ _Basado en el tutorial de Devdactic:_ [Supabase & Ionic - Build a Realtime Chat 
 - **Gestión de Sesión**
   - Cierre de sesión disponible.
 
-## 🛠 Tecnologías Utilizadas
+## 🧰 Tecnologías que usamos
 
 - **Ionic Framework** (Angular)
 - **Supabase (BaaS)**
@@ -29,13 +30,13 @@ _Basado en el tutorial de Devdactic:_ [Supabase & Ionic - Build a Realtime Chat 
   - Realtime Database (PostgreSQL)
 - **TypeScript**
 
-## ✅ Prerrequisitos
+## 📋 Antes de comenzar...
 
 - Node.js y npm instalados
 - Ionic CLI: `npm install -g @ionic/cli`
 - Cuenta de Supabase: [https://supabase.com](https://supabase.com)
 
-## ⚙️ Configuración del Proyecto
+## ⚙️ ¿Cómo lo pongo a funcionar?
 
 1. **Clonar el Repositorio**
     ```bash
@@ -54,10 +55,9 @@ _Basado en el tutorial de Devdactic:_ [Supabase & Ionic - Build a Realtime Chat 
 
 1. Crea un nuevo proyecto en [Supabase](https://supabase.com).
 2. En **Project Settings > API**, copia tu `Project URL` y `anon public key`.
-3. Crea/modifica `src/environments/environment.ts` con:
+3. Crea/modifica `src/supabaseClient.ts` con:
     ```ts
     export const environment = {
-      production: false,
       supabaseUrl: 'TU_SUPABASE_URL',
       supabaseKey: 'TU_SUPABASE_ANON_KEY'
     };
@@ -108,7 +108,7 @@ CREATE TABLE public.messagesChat (
 
 ---
 
-## ▶️ Ejecución de la App
+## ▶️ ¡Hora de probarla!
 
 ```bash
 ionic serve
@@ -118,7 +118,7 @@ ionic serve
 
 ---
 
-## 🖼️ Capturas de Pantalla
+## 🖼️ Así se ve
 
 ### Confirmación de Email
 ![Confirmación Email](https://github.com/user-attachments/assets/d23e4d12-25ef-46c6-9e0a-79978dd6c738)
@@ -136,5 +136,3 @@ ionic serve
 ![Enviando](https://github.com/user-attachments/assets/86cf7236-c49d-475e-9656-4bb8238c17bc)
 
 ---
-
-📦 ¡Tu app está lista para usarse o seguir ampliándose con nuevas funcionalidades como chats privados o notificaciones push!
