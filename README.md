@@ -3,7 +3,7 @@
 
 Una app sencilla y moderna de chat en tiempo real, creada con Ionic y potenciada por Supabase como backend. Los usuarios pueden registrarse, iniciar sesión, confirmar su correo y empezar a chatear con cualquier persona conectada.
 
-## 👨‍🏫 Desarrollado por
+## Desarrollado por
 - Isaac Quinapallo
 - Alejandro Gutierrez
 
@@ -11,7 +11,7 @@ _Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase
 
 ---
 
-## 🚀 ¿Qué puedes hacer con esta app?
+## ¿Qué puedes hacer con esta app?
 
 - **Autenticación de Usuarios**
   - Registro e inicio de sesión.
@@ -22,7 +22,7 @@ _Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase
 - **Gestión de Sesión**
   - Cierre de sesión disponible.
 
-## 🧰 Tecnologías que usamos
+## Tecnologías que usamos
 
 - **Ionic Framework** (Angular)
 - **Supabase (BaaS)**
@@ -30,13 +30,13 @@ _Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase
   - Realtime Database (PostgreSQL)
 - **TypeScript**
 
-## 📋 Antes de comenzar...
+## Antes de comenzar...
 
 - Node.js y npm instalados
 - Ionic CLI: `npm install -g @ionic/cli`
 - Cuenta de Supabase: [https://supabase.com](https://supabase.com)
 
-## ⚙️ ¿Cómo lo pongo a funcionar?
+## ¿Cómo lo pongo a funcionar?
 
 1. **Clonar el Repositorio**
     ```bash
@@ -51,7 +51,7 @@ _Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase
 
 3. **Configurar Supabase**
 
-### 🧱 Crear Proyecto y Credenciales
+### Crear Proyecto y Credenciales
 
 1. Crea un nuevo proyecto en [Supabase](https://supabase.com).
 2. En **Project Settings > API**, copia tu `Project URL` y `anon public key`.
@@ -63,7 +63,7 @@ _Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase
     };
     ```
 
-### 📦 Crear tabla `messagesChat`
+### Crear tabla `messagesChat`
 
 ```sql
 CREATE TABLE public.messagesChat (
@@ -76,7 +76,7 @@ CREATE TABLE public.messagesChat (
 
 ![Tabla creada](https://github.com/user-attachments/assets/e0312c55-a61b-4fab-aefe-95ead2588629)
 
-### 🔐 Habilitar RLS y Políticas
+### Habilitar RLS y Políticas
 
 1. Ve a **Authentication > Policies**
 2. Selecciona `messagesChat` y haz clic en **"Enable RLS"**
@@ -108,7 +108,7 @@ CREATE TABLE public.messagesChat (
 
 ---
 
-## ▶️ ¡Hora de probarla!
+## ¡Hora de probarla!
 
 ```bash
 ionic serve
@@ -118,7 +118,7 @@ ionic serve
 
 ---
 
-## 🖼️ Así se ve
+## Así se ve
 
 ### Confirmación de Email
 ![Confirmación Email](https://github.com/user-attachments/assets/d23e4d12-25ef-46c6-9e0a-79978dd6c738)
