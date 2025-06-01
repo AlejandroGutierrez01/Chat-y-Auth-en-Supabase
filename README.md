@@ -1,17 +1,17 @@
 
 # Chat en Línea con Ionic y Supabase - Deber de Repaso
 
-Una app sencilla y moderna de chat en tiempo real, creada con Ionic y potenciada por Supabase como backend. Los usuarios pueden registrarse, iniciar sesión, confirmar su correo y empezar a chatear con cualquier persona conectada.
+Una app sencilla de chat en tiempo real, creada con Ionic y potenciada por Supabase como backend. Los usuarios pueden registrarse, iniciar sesión, confirmar su correo y empezar a chatear con cualquier persona conectada.
 
 ## Desarrollado por
 - Isaac Quinapallo
 - Alejandro Gutierrez
 
-_Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase & Ionic - Build a Realtime Chat App](https://devdactic.com/supabase-ionic)
+Este proyecto esta basado en el tutorial de Devdactic:_ [Supabase & Ionic - Build a Realtime Chat App](https://devdactic.com/supabase-ionic)
 
 ---
 
-## ¿Qué puedes hacer con esta app?
+## Funcionalidades de la App
 
 - **Autenticación de Usuarios**
   - Registro e inicio de sesión.
@@ -22,12 +22,12 @@ _Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase
 - **Gestión de Sesión**
   - Cierre de sesión disponible.
 
-## Tecnologías que usamos
+## Herramientas usadas
 
 - **Ionic Framework** (Angular)
-- **Supabase (BaaS)**
+- **Supabase **
   - Autenticación
-  - Realtime Database (PostgreSQL)
+  - Database basada en Postgre
 - **TypeScript**
 
 ## Antes de comenzar...
@@ -55,15 +55,17 @@ _Este proyecto nació a partir de un excelente tutorial de Devdactic:_ [Supabase
 
 1. Crea un nuevo proyecto en [Supabase](https://supabase.com).
 2. En **Project Settings > API**, copia tu `Project URL` y `anon public key`.
-3. Crea/modifica `src/supabaseClient.ts` con:
+3. Crea/modifica `src/app/supabase.client.ts` con:
     ```ts
-    export const environment = {
-      supabaseUrl: 'TU_SUPABASE_URL',
-      supabaseKey: 'TU_SUPABASE_ANON_KEY'
-    };
+    import {createClient} from  '@supabase/supabase-js'
+
+    const supabaseUrl = "https:*tucodigo*.supabase.co"
+    const supabaseKey = '*tuapikey*';
+
+    export const supabase = createClient(supabaseUrl, supabaseKey)
     ```
 
-### Crear tabla `messagesChat`
+### Crear tabla `messagesChat` en supabase
 
 ```sql
 CREATE TABLE public.messagesChat (
@@ -76,7 +78,7 @@ CREATE TABLE public.messagesChat (
 
 ![Tabla creada](https://github.com/user-attachments/assets/e0312c55-a61b-4fab-aefe-95ead2588629)
 
-### Habilitar RLS y Políticas
+### Habilitar Politicas para insertar y ver datos
 
 1. Ve a **Authentication > Policies**
 2. Selecciona `messagesChat` y haz clic en **"Enable RLS"**
@@ -98,27 +100,10 @@ CREATE TABLE public.messagesChat (
 
 ![Políticas de seguridad](https://github.com/user-attachments/assets/eff926d7-88ff-4e8b-ab5c-b922e43a5245)
 
-### Confirmación por Correo
-
-1. En **Authentication > Templates**, activa "Confirm signup".
-2. En **Authentication > Settings > General**, define el `Site URL` como `http://localhost:8100`.
-
-4. **Habilitar confirmación de correo**
-   - Asegúrate que "Enable email confirmations" esté activa.
-
 ---
 
-## ¡Hora de probarla!
 
-```bash
-ionic serve
-```
-
-- Luego abre: [http://localhost:8100](http://localhost:8100)
-
----
-
-## Así se ve
+## Vista de la app
 
 ### Confirmación de Email
 ![Confirmación Email](https://github.com/user-attachments/assets/d23e4d12-25ef-46c6-9e0a-79978dd6c738)
